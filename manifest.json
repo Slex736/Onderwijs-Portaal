@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Rooster Helper",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://rbc.onderwijsportalen.nl/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
