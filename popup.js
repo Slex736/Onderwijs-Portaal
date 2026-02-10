@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteBtn.addEventListener("click", () => {
 
 
-    if (!date.value || !hour.value || !deleteBtn) return alert("Missing input fields in popup.html");
+    if (!date.value || !hour.value || !deleteBtn) return;
 
     chrome.storage.sync.set({ date: date.value, hour: hour.value }, () => {
     });
